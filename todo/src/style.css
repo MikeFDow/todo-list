@@ -17,7 +17,38 @@
     height: 800px;
 }
 
-.buttonTest {
+#addTodoButton {
     font-size: large;
-    border: 5px solid blue;
 }
+
+#popupForm {
+    display: none;
+    /*display: flex;*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 600px;
+    height: 500px;
+    
+}
+
+.formContainer {
+    width: 450px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formContainer>input {
+    margin-bottom: 20px;
+}
+
+textarea, select {
+    margin-bottom: 20px;
+}
+
