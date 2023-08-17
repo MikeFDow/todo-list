@@ -12,10 +12,10 @@
     <div class="header"> TODO LIST</div>
     <div class="container">
         <div class="sidebar">sidebar</div>
-        <div class="projects">
+        <div class="projects" id="projectsContainer">
             <button id="addTodoButton">+</button>
             <div id="popupForm" >Add Todo Item
-                <form action="" class="formContainer">
+                <form action="" onsubmit="return false" class="formContainer" id="form">
                     <label for="title">Title</label>
                     <input type="text" id="title" name="title">
 
@@ -35,8 +35,6 @@
                     <label for="notes">Notes</label>
                     <textarea name="notes" id="notes" cols="30" rows="10"></textarea>
 
-                    
-                    <button type="submit">Add</button>
                 </form>
                 <button id="closeForm">Cancel</button>
             </div>

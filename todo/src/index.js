@@ -1,6 +1,7 @@
 import css from "./style.css";
-
 import "./dom.js";
+import {closeTheForm, displayTodoItems} from "./dom.js";
+
 
 let todoArray = [];
 
@@ -25,11 +26,29 @@ class TodoItem {
 };
 
 function addItemToProject() {
+    // todoArray.pop();
     const item = new TodoItem(
-        "todo placeholder",
+        document.getElementById("title").value,
+        document.getElementById("description").value,
+        document.getElementById("dueDate").value,
+        document.getElementById("priority").value,
+        document.getElementById("notes").value
     );
+
+    document.getElementById("title").value = "";
+    document.getElementById("description").value = "";
+    document.getElementById("dueDate").value = "";
+    document.getElementById("priority").value = "";
+    document.getElementById("notes").value = "";
+
+    closeTheForm();
+    
+
     console.log(item);
     todoArray.push(item);
+    displayTodoItems();
+
+    console.log(todoArray);
 }
 
 export {addItemToProject};
