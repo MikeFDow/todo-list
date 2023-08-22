@@ -5,13 +5,31 @@ import {closeTheForm, displayTodoItems} from "./dom.js";
 
 let todoArray = [];
 
+let projectArray = [];
+
 export default todoArray;
 
+class Project {
+
+    constructor(title, items = []) {
+        this.title = title;
+        this.items = items;
+        // maybe do a method here, like: this.something = function() { return items on click , or display items}
+    }
+};
+
 function createNewProject() {
-    let project1 = [];
-    console.log(project1); 
-    return project1;
+    const project = new Project(
+        document.getElementById("projectTitle").value
+        // might need [] here
+    );
+    console.log(project);
+    projectArray.push(project);
+    console.log(projectArray);
+    console.log(projectArray[0]);
 }
+
+export {createNewProject};
 
 class TodoItem {
 
@@ -46,7 +64,7 @@ function addItemToProject() {
 
     console.log(item);
     todoArray.push(item);
-    displayTodoItems();
+    displayTodoItems(item);
 
     console.log(todoArray);
 }

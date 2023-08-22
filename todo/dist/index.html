@@ -11,7 +11,15 @@
 <body>
     <div class="header"> TODO LIST</div>
     <div class="container">
-        <div class="sidebar">sidebar</div>
+        <div class="sidebar">
+            <div id="projectFormContainer">
+                <form action="" onsubmit="return false" class="projectForm">
+                    <label for="projectTitle">Title</label>
+                    <input type="text" id="projectTitle" name="projectTitle">
+                    
+                </form>
+            </div>
+        </div>
         <div class="projects" id="projectsContainer">
             <button id="addTodoButton">+</button>
             <div id="popupForm" >Add Todo Item
