@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    
+</head>
+<body>
+    <div id="popupForm" >Add Todo Item
+        <form action="" onsubmit="return false" class="formContainer" id="form">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title">
+
+            <label for="description">Description</label>
+            <input type="text" id="description" name="description">
+
+            <label for="dueDate">Due Date</label>
+            <input type="date" id="dueDate" name="dueDate">
+
+            <label for="priority">Priority</label>
+            <select name="Priority" id="priority">
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>
+
+            <label for="notes">Notes</label>
+            <textarea name="notes" id="notes" cols="30" rows="10"></textarea>
+
+        </form>
+        <button id="closeForm">Cancel</button>
+    </div>
+    <div class="header"> <p class="header-title">TO-DO LIST</p>
+        <div></div>
+        <button id="addTodoButton">Add new item to project</button>
+    </div>
+    <div class="container">
+        <div class="sidebar" id="sidebarId">
+            <div id="projectFormContainer">
+                <form action="" onsubmit="return false" class="projectForm">
+                    <label for="projectTitle"></label>
+                    <input type="text" id="projectTitle" name="projectTitle" placeholder="New Project Name">
+                    
+                </form>
+            </div>
+        </div>
+        <div class="projectsAndInfoContainer">
+            <div class="info">
+                <p>Title</p>
+                <p>Description</p>
+                <p>Due Date</p>
+                <p>Priority</p>
+                <p>Notes</p>
+            </div>
+            <div class="projects" id="projectsContainer">
+            
+            
+            </div>
+        </div>
+    </div>
+</body>
+</html>
